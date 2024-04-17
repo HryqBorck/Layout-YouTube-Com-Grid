@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+main {
+    height: 100vh;
+    background-color: white;
+}
+.container {
+  margin: 0 auto;
+  padding-top: 35px;
+  max-width: 900px;
+  display: grid;
+  grid-template-areas:
+    "video-highlight advertising"
+    "video-highlight suggested-videos";
+  grid-template-columns: 1fr 270px;
+  grid-template-rows: 56px 1fr;
+  grid-gap: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f3f0f0;
+  padding: 35px;
+}
+
+.video-highlight {
+  grid-area: video-highlight;
+}
+
+.video-highlight .description {
+    font-weight: 300;
+}
+
+.video-highlight .description .title{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.video-highlight .description p{
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.video-highlight .description .views{
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.advertising {
+  grid-area: advertising;
+}
+
+.suggested-videos {
+  grid-area: suggested-videos;
+
+}
+.suggested-videos .video{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.suggested-videos .video .description .title{
+    font-size: 14px;
+}
+
+.suggested-videos .video .description p{
+    font-size: 11px;
+    font-weight: 300;
+    opacity: 0.7;
+    padding: 3px 0;
+}
+
+@media (max-width:885px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggested-videos .video{
+        justify-content: start;
+    }
+}
+
+@media (max-width:615px){
+    .video-highlight img {
+        width: 30em;
+    }
+
+    .video-highlight .description .title{
+        font-size: 16px;
+    }
+
+    .video-highlight .description .views{
+        font-size: 12px;
+    }
+
+    .video-highlight .description p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:546px){
+    .video-highlight img {
+        width: 25em;
+    }
+
+    .container {
+        padding: 10px;
+
+    }
+}
+
+
+
+@media (max-width:422px){
+    .video-highlight img {
+        width: 19em;
+    }
+
+    .video-highlight .description .title{
+        font-size: 14px;
+    }
+
+    .video-highlight .description .views{
+        font-size: 10px;
+    }
+
+    .video-highlight .description p{
+        font-size: 12px;
+    }
+}
